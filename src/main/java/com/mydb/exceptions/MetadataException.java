@@ -5,6 +5,12 @@ package com.mydb.exceptions;
  */
 public class MetadataException extends StorageException {
 
+    /**
+     * Constructs a metadata exception with context and root cause.
+     *
+     * @param message description of the metadata failure
+     * @param cause underlying exception thrown during processing
+     */
     public MetadataException(String message, Throwable cause) {
         super(message, cause);
     }

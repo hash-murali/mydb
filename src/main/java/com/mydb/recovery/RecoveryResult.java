@@ -6,10 +6,11 @@ import com.mydb.meta.Metadata;
 import java.util.List;
 
 /**
- * Output of the recovery procedure.
- * Contains recovered metadata and valid ranges.
+ * Output of the recovery procedure containing recovered metadata and valid ranges.
  */
 public class RecoveryResult {
+    /** Latest metadata reconstructed from disk. */
     public Metadata metadata;
+    /** Ordered list of ranges validated during recovery. */
     public List<RangeInfo> ranges;
 }
