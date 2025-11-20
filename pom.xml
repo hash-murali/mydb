@@ -25,6 +25,8 @@
         </dependency>
     </dependencies>
 
+    </properties>
+
     <build>
         <plugins>
             <!-- Build a runnable fat JAR -->
