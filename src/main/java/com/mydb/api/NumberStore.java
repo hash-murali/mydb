@@ -11,7 +11,7 @@ import java.util.Optional;
  * Public API for the number storage engine.
  * <p>
  * Implementations are responsible for persisting {@link BigInteger} values, exposing
- * exact lookups, range-based reads, and lifecycle management of underlying resources.
+ * exact lookups, batch-oriented reads, and lifecycle management of underlying resources.
  */
 public interface NumberStore {
 
@@ -24,7 +24,7 @@ public interface NumberStore {
     void write(BigInteger number) throws IOException;
 
     /**
-     * Finds if a number belongs to any range.
+     * Finds if a number belongs to any persisted batch.
      *
      * @param number value to locate
      * @throws StorageException on index corruption
@@ -36,7 +36,7 @@ public interface NumberStore {
      *
      * @param limit maximum value (inclusive)
      * @param maxCount maximum number of records to retrieve
-     * @throws StorageException when reading ranges fails
+     * @throws StorageException when reading batches fails
      */
     List<BigInteger> readBelow(BigInteger limit, int maxCount) throws IOException;
 

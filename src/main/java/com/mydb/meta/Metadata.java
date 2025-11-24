@@ -6,12 +6,12 @@ package com.mydb.meta;
 public class Metadata {
     /** Schema version number. */
     public int version;
-    /** File name of the most recently active range file. */
-    public String lastRangeFile;
-    /** Next identifier to use when creating a range file. */
-    public int nextRangeId;
-    /** Maximum records permitted per range. */
-    public int maxRecordsPerRange;
+    /** File name of the most recently active batch file. */
+    public String lastBatchFile;
+    /** Next identifier to use when creating a batch file. */
+    public int nextBatchId;
+    /** Maximum records permitted per batch. */
+    public int maxRecordsPerBatch;
     /** Creation timestamp for the datastore. */
     public String createdAt;
 }
